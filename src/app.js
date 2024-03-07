@@ -27,10 +27,7 @@ window.onload = function() {
     let domainExtensionWithoutDot = removeDot(domainExtension);
     if (domainNoun.endsWith(domainExtensionWithoutDot) == true) {
       // compruebo si coincide el final del nombre con la extension sin el punto
-      let newdomainNoun = domainNoun.slice(
-        0,
-        -domainExtensionWithoutDot.length
-      );
+      let newdomainNoun = domainNoun.slice(0,-domainExtensionWithoutDot.length);
       // si coincide creo nuevo nombre sin las ultimas letras de la extension
       return newdomainNoun; // devuelvo el nuevo nombre
     } else return domainNoun; // sino coincide, devuelvo el nombre tal cual sin cambiar
